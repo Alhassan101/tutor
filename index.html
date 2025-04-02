@@ -28,7 +28,6 @@
             font-size: 22px;
             font-weight: bold;
         }
-        /* Dropdown & Confirm button styles */
         select, .selector-container button {
             font-size: 20px;
             padding: 5px 10px;
@@ -41,20 +40,32 @@
             text-align: center;
             transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
         }
-        
-        /* For the dropdown options */
+
+        /* Ensure dropdown options match the background of the body */
+        select {
+            background-color: transparent; /* Background of the dropdown matches the body */
+            color: #e5e8e8;
+        }
+
         select option {
-            background-color: #2e4053; /* Set the same background as the body */
-            color: #e5e8e8; /* Ensure text is visible */
+            background-color: #2e4053; /* Matching the body background */
+            color: #e5e8e8; /* Ensure text is readable */
+        }
+
+        /* Remove default dropdown styling in some browsers (Firefox, Chrome, etc.) */
+        select::-ms-expand {
+            display: none; /* Remove dropdown arrow in IE */
         }
 
         select:hover, .selector-container button:hover {
             border-color: #e5e8e8;
         }
+
         .footer-text {
             font-size: 24px;
             font-weight: bold;
         }
+
         .button-container {
             display: flex;
             flex-wrap: wrap;
@@ -63,7 +74,7 @@
             flex-direction: row-reverse;
             display: none;
         }
-        /* Letter buttons styles */
+
         .button {
             width: 100px;
             height: 100px;
@@ -74,6 +85,7 @@
             transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
             border-radius: 20px;
         }
+
         .button:hover {
             transform: scale(1.2);
             border: 3px solid #46b0ad;
@@ -109,7 +121,6 @@
     </footer>
     
     <script>
-        // Populate the dropdown with numbers from 0 to 29
         window.onload = function() {
             let select = document.getElementById("letter-count");
             for (let i = 0; i <= 29; i++) {
