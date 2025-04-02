@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Alphabet</title>
+    <style>
+        body {
+            background-color: #2e4053;
+            background-size: cover;
+            font-family: Calibri, sans-serif; /* Set the font to Calibri */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full screen height */
+            justify-content: flex-start; /* Ensure the content stays at the top */
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #e5e8e8; /* Change the color of the header text */
+            margin-bottom: 50px; /* Reduce space between header and button container */
+            font-family: Calibri, sans-serif; /* Apply Calibri to the header */
+
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 0; /* Zero top margin to bring buttons closer */
+            flex-direction: row-reverse; /* This will make the buttons appear from right to left */
+        }
+        .button {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            border: none;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; /* Add border transition */
+            border-radius: 20px; /* Rounded corners for the button */
+        }
+        .button:hover {
+            transform: scale(1.2); /* Scale the button to make it "pop" */
+            border: 3px solid #46b0ad; /* Add a border on hover */
+            border-radius: 20px; /* Maintain rounded corners on hover */
+        }
+        footer {
+    margin-top: 20px; /* Adjust spacing from buttons */
+    text-align: center;
+    padding: 20px 0;
+    font-family: Calibri, sans-serif; /* Apply Calibri to the footer */
+
+}
+
+.footer-text {
+    font-size: 24px; /* Increase text size */
+    font-weight: bold; /* Make it bold */
+    color: #e5e8e8; /* Match the header color */
+    line-height: 0.3; /* Adjust this value to decrease spacing */
+
+}
+
+    </style>
+<link rel="icon" type="image/x-icon" href="icon.ico">
+    
+    
+</head>
+<body>
+    <h1>Arabic Alphabet</h1>
+
+    <div class="button-container">
+        <button class="button" style="background-image: url('Images/1.png');" onclick="playSound('Sounds/1.wav')"></button>
+        <button class="button" style="background-image: url('Images/2.png');" onclick="playSound('Sounds/2.wav')"></button>
+        <button class="button" style="background-image: url('Images/3.png');" onclick="playSound('Sounds/3.wav')"></button>
+        <button class="button" style="background-image: url('Images/4.png');" onclick="playSound('Sounds/4.wav')"></button>
+        <button class="button" style="background-image: url('Images/5.png');" onclick="playSound('Sounds/5.wav')"></button>
+        <button class="button" style="background-image: url('Images/6.png');" onclick="playSound('Sounds/6.wav')"></button>
+        <button class="button" style="background-image: url('Images/7.png');" onclick="playSound('Sounds/7.wav')"></button>
+        <button class="button" style="background-image: url('Images/8.png');" onclick="playSound('Sounds/8.wav')"></button>
+        <button class="button" style="background-image: url('Images/9.png');" onclick="playSound('Sounds/9.wav')"></button>
+        <button class="button" style="background-image: url('Images/10.png');" onclick="playSound('Sounds/10.wav')"></button>
+        <button class="button" style="background-image: url('Images/11.png');" onclick="playSound('Sounds/11.wav')"></button>
+        <button class="button" style="background-image: url('Images/12.png');" onclick="playSound('Sounds/12.wav')"></button>
+        <button class="button" style="background-image: url('Images/13.png');" onclick="playSound('Sounds/13.wav')"></button>
+        <button class="button" style="background-image: url('Images/14.png');" onclick="playSound('Sounds/14.wav')"></button>
+        <button class="button" style="background-image: url('Images/15.png');" onclick="playSound('Sounds/15.wav')"></button>
+        <button class="button" style="background-image: url('Images/16.png');" onclick="playSound('Sounds/16.wav')"></button>
+        <button class="button" style="background-image: url('Images/17.png');" onclick="playSound('Sounds/17.wav')"></button>
+        <button class="button" style="background-image: url('Images/18.png');" onclick="playSound('Sounds/18.wav')"></button>
+        <button class="button" style="background-image: url('Images/19.png');" onclick="playSound('Sounds/19.wav')"></button>
+        <button class="button" style="background-image: url('Images/20.png');" onclick="playSound('Sounds/20.wav')"></button>
+        <button class="button" style="background-image: url('Images/21.png');" onclick="playSound('Sounds/21.wav')"></button>
+        <button class="button" style="background-image: url('Images/22.png');" onclick="playSound('Sounds/22.wav')"></button>
+        <button class="button" style="background-image: url('Images/23.png');" onclick="playSound('Sounds/23.wav')"></button>
+        <button class="button" style="background-image: url('Images/24.png');" onclick="playSound('Sounds/24.wav')"></button>
+        <button class="button" style="background-image: url('Images/25.png');" onclick="playSound('Sounds/25.wav')"></button>
+        <button class="button" style="background-image: url('Images/26.png');" onclick="playSound('Sounds/26.wav')"></button>
+        <button class="button" style="background-image: url('Images/27.png');" onclick="playSound('Sounds/27.wav')"></button>
+        <button class="button" style="background-image: url('Images/28.png');" onclick="playSound('Sounds/28.wav')"></button>
+        <button class="button" style="background-image: url('Images/29.png');" onclick="playSound('Sounds/29.wav')"></button>
+    </div>
+
+    <audio id="audio-player"></audio>
+
+    <footer>
+        <p class="footer-text">Made by: Alhassan Mokhtar</p>
+        <p class="footer-text">101</p>
+    </footer>
+    
+    
+
+    <script>
+        function playSound(soundFile) {
+            var audio = document.getElementById('audio-player');
+            audio.src = soundFile;
+            audio.play();
+        }
+    </script>
+</body>
+</html>
