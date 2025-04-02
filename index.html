@@ -28,11 +28,26 @@
             font-size: 22px;
             font-weight: bold;
         }
-        select, .selector-container button {
+        /* Confirm button styles */
+        .selector-container button {
             font-size: 20px;
             padding: 5px 10px;
             border: 3px solid #46b0ad;
-            border-radius: 5px; /* Adjusted radius */
+            border-radius: 5px; /* Same radius for both button and dropdown */
+            background-color: transparent;
+            color: #e5e8e8;
+            cursor: pointer;
+            appearance: none;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+        }
+
+        /* Dropdown styles */
+        select {
+            font-size: 20px;
+            padding: 5px 10px;
+            border: 3px solid #46b0ad; /* Same border as the button */
+            border-radius: 5px; /* Same radius as the button */
             background-color: transparent;
             color: #e5e8e8;
             cursor: pointer;
@@ -42,11 +57,6 @@
         }
 
         /* Ensure dropdown options match the background of the body */
-        select {
-            background-color: transparent; /* Background of the dropdown matches the body */
-            color: #e5e8e8;
-        }
-
         select option {
             background-color: #2e4053; /* Matching the body background */
             color: #e5e8e8; /* Ensure text is readable */
