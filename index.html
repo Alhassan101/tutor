@@ -115,9 +115,46 @@
 
     <div class="button-container" id="button-container">
         <script>
+            let sounds = [];
+
+            window.onload = function() {
+                // Preload all sounds
+                for (let i = 1; i <= 29; i++) {
+                    let audio = new Audio(`Sounds/${i}.wav`);
+                    sounds[i - 1] = audio;
+                }
+
+                let select = document.getElementById("letter-count");
+                for (let i = 0; i <= 29; i++) {
+                    let option = document.createElement("option");
+                    option.value = i;
+                    option.textContent = i;
+                    select.appendChild(option);
+                }
+            };
+
+            function playSound(index) {
+                let audio = sounds[index - 1];
+                audio.currentTime = 0;  // Reset to start, ensuring no delay
+                audio.play();
+            }
+
+            function showLetters() {
+                let count = document.getElementById('letter-count').value;
+                let container = document.getElementById('button-container');
+                
+                container.style.display = count > 0 ? 'flex' : 'none';
+                
+                for (let i = 1; i <= 29; i++) {
+                    document.getElementById(`btn${i}`).style.display = i <= count ? 'block' : 'none';
+                }
+            }
+        </script>
+        
+        <script>
             for (let i = 1; i <= 29; i++) {
                 document.write(`
-                    <button class="button" id="btn${i}" style="background-image: url('Images/${i}.png'); display: none;" onclick="playSound('Sounds/${i}.wav')"></button>
+                    <button class="button" id="btn${i}" style="background-image: url('Images/${i}.png'); display: none;" onclick="playSound(${i})"></button>
                 `);
             }
         </script>
@@ -130,33 +167,5 @@
         <p class="footer-text">101</p>
     </footer>
     
-    <script>
-        window.onload = function() {
-            let select = document.getElementById("letter-count");
-            for (let i = 0; i <= 29; i++) {
-                let option = document.createElement("option");
-                option.value = i;
-                option.textContent = i;
-                select.appendChild(option);
-            }
-        };
-
-        function playSound(soundFile) {
-            var audio = document.getElementById('audio-player');
-            audio.src = soundFile;
-            audio.play();
-        }
-
-        function showLetters() {
-            let count = document.getElementById('letter-count').value;
-            let container = document.getElementById('button-container');
-            
-            container.style.display = count > 0 ? 'flex' : 'none';
-            
-            for (let i = 1; i <= 29; i++) {
-                document.getElementById(`btn${i}`).style.display = i <= count ? 'block' : 'none';
-            }
-        }
-    </script>
 </body>
 </html>
