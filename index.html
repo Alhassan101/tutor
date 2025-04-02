@@ -28,9 +28,24 @@
             font-size: 22px;
             font-weight: bold;
         }
-        select, button {
+        select {
             font-size: 20px;
             padding: 5px 10px;
+        }
+        /* Confirm button styles */
+        .selector-container button {
+            font-size: 20px;
+            padding: 5px 10px;
+            border: 3px solid #46b0ad;
+            border-radius: 20px;
+            background-color: transparent;
+            color: #e5e8e8;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+        }
+        .selector-container button:hover {
+            transform: scale(1.1);
+            border-color: #e5e8e8;
         }
         .footer-text {
             font-size: 24px;
@@ -44,6 +59,7 @@
             flex-direction: row-reverse;
             display: none;
         }
+        /* Letter buttons styles */
         .button {
             width: 100px;
             height: 100px;
@@ -66,12 +82,12 @@
     <h1>Arabic Alphabet</h1>
     
     <div class="selector-container">
-        <p>Choose how many letters to be viewed:</p>
+        <p>Select the number of letters to display:</p>
         <select id="letter-count">
             <option value="0">0</option>
             <script>
                 for (let i = 1; i <= 29; i++) {
-                    document.write(<option value="${i}">${i}</option>);
+                    document.write(`<option value="${i}">${i}</option>`);
                 }
             </script>
         </select>
@@ -81,9 +97,9 @@
     <div class="button-container" id="button-container">
         <script>
             for (let i = 1; i <= 29; i++) {
-                document.write(
+                document.write(`
                     <button class="button" id="btn${i}" style="background-image: url('Images/${i}.png'); display: none;" onclick="playSound('Sounds/${i}.wav')"></button>
-                );
+                `);
             }
         </script>
     </div>
@@ -109,7 +125,7 @@
             container.style.display = count > 0 ? 'flex' : 'none';
             
             for (let i = 1; i <= 29; i++) {
-                document.getElementById(btn${i}).style.display = i <= count ? 'block' : 'none';
+                document.getElementById(`btn${i}`).style.display = i <= count ? 'block' : 'none';
             }
         }
     </script>
