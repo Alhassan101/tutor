@@ -28,9 +28,21 @@
             font-size: 22px;
             font-weight: bold;
         }
+        /* Dropdown menu styles */
         select {
             font-size: 20px;
             padding: 5px 10px;
+            border: 3px solid #46b0ad; /* Match the Confirm button */
+            border-radius: 20px; /* Rounded corners */
+            background-color: transparent; /* Transparent background */
+            color: #e5e8e8; /* Light text for visibility */
+            cursor: pointer;
+            appearance: none; /* Removes default dropdown styling */
+            text-align: center;
+            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+        }
+        select:hover {
+            border-color: #e5e8e8; /* Change border color on hover */
         }
         /* Confirm button styles */
         .selector-container button {
