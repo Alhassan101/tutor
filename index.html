@@ -44,21 +44,23 @@
             flex-direction: row-reverse;
             display: none;
         }
-        .button {
-            width: 100px;
-            height: 100px;
-            background-size: cover;
-            border: none;
+        button {
+            font-size: 20px;
+            padding: 5px 10px;
+            border: 3px solid #46b0ad; /* Same border as the letter buttons */
+            border-radius: 20px; /* Match the letter buttons */
+            background-color: transparent; /* Remove background */
+            color: #e5e8e8; /* Ensure text is visible */
             cursor: pointer;
-            background-repeat: no-repeat;
             transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
-            border-radius: 20px;
         }
-        .button:hover {
-            transform: scale(1.2);
-            border: 3px solid #46b0ad;
-            border-radius: 20px;
+
+        button:hover {
+            transform: scale(1.1);
+            border-color: #e5e8e8; /* Optional: change border color on hover */
         }
+
+
     </style>
     <link rel="icon" type="image/x-icon" href="icon.ico">
 </head>
