@@ -8,28 +8,28 @@
         body {
             background-color: #2e4053;
             background-size: cover;
-            font-family: Calibri, sans-serif; /* Set the font to Calibri */
+            font-family: Calibri, sans-serif;
             text-align: center;
             display: flex;
             flex-direction: column;
-            height: 100vh; /* Full screen height */
-            justify-content: flex-start; /* Ensure the content stays at the top */
+            height: 100vh;
+            justify-content: flex-start;
             margin: 0;
             padding: 0;
         }
-        h1 {
-            color: #e5e8e8; /* Change the color of the header text */
-            margin-bottom: 50px; /* Reduce space between header and button container */
-            font-family: Calibri, sans-serif; /* Apply Calibri to the header */
-
+        h1, p {
+            color: #e5e8e8;
+        }
+        .selector-container {
+            margin: 20px;
         }
         .button-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
-            margin-top: 0; /* Zero top margin to bring buttons closer */
-            flex-direction: row-reverse; /* This will make the buttons appear from right to left */
+            flex-direction: row-reverse;
+            display: none;
         }
         .button {
             width: 100px;
@@ -38,84 +38,66 @@
             border: none;
             cursor: pointer;
             background-repeat: no-repeat;
-            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; /* Add border transition */
-            border-radius: 20px; /* Rounded corners for the button */
+            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+            border-radius: 20px;
         }
         .button:hover {
-            transform: scale(1.2); /* Scale the button to make it "pop" */
-            border: 3px solid #46b0ad; /* Add a border on hover */
-            border-radius: 20px; /* Maintain rounded corners on hover */
+            transform: scale(1.2);
+            border: 3px solid #46b0ad;
+            border-radius: 20px;
         }
-        footer {
-    margin-top: 20px; /* Adjust spacing from buttons */
-    text-align: center;
-    padding: 20px 0;
-    font-family: Calibri, sans-serif; /* Apply Calibri to the footer */
-
-}
-
-.footer-text {
-    font-size: 24px; /* Increase text size */
-    font-weight: bold; /* Make it bold */
-    color: #e5e8e8; /* Match the header color */
-    line-height: 0.3; /* Adjust this value to decrease spacing */
-
-}
-
     </style>
-<link rel="icon" type="image/x-icon" href="icon.ico">
-    
-    
+    <link rel="icon" type="image/x-icon" href="icon.ico">
 </head>
 <body>
     <h1>Arabic Alphabet</h1>
-
-    <div class="button-container">
-        <button class="button" style="background-image: url('Images/1.png');" onclick="playSound('Sounds/1.wav')"></button>
-        <button class="button" style="background-image: url('Images/2.png');" onclick="playSound('Sounds/2.wav')"></button>
-        <button class="button" style="background-image: url('Images/3.png');" onclick="playSound('Sounds/3.wav')"></button>
-        <button class="button" style="background-image: url('Images/4.png');" onclick="playSound('Sounds/4.wav')"></button>
-        <button class="button" style="background-image: url('Images/5.png');" onclick="playSound('Sounds/5.wav')"></button>
-        <button class="button" style="background-image: url('Images/6.png');" onclick="playSound('Sounds/6.wav')"></button>
-        <button class="button" style="background-image: url('Images/7.png');" onclick="playSound('Sounds/7.wav')"></button>
-        <button class="button" style="background-image: url('Images/8.png');" onclick="playSound('Sounds/8.wav')"></button>
-        <button class="button" style="background-image: url('Images/9.png');" onclick="playSound('Sounds/9.wav')"></button>
-        <button class="button" style="background-image: url('Images/10.png');" onclick="playSound('Sounds/10.wav')"></button>
-        <button class="button" style="background-image: url('Images/11.png');" onclick="playSound('Sounds/11.wav')"></button>
-        <button class="button" style="background-image: url('Images/12.png');" onclick="playSound('Sounds/12.wav')"></button>
-        <button class="button" style="background-image: url('Images/13.png');" onclick="playSound('Sounds/13.wav')"></button>
-        <button class="button" style="background-image: url('Images/14.png');" onclick="playSound('Sounds/14.wav')"></button>
-        <button class="button" style="background-image: url('Images/15.png');" onclick="playSound('Sounds/15.wav')"></button>
-        <button class="button" style="background-image: url('Images/16.png');" onclick="playSound('Sounds/16.wav')"></button>
-        <button class="button" style="background-image: url('Images/17.png');" onclick="playSound('Sounds/17.wav')"></button>
-        <button class="button" style="background-image: url('Images/18.png');" onclick="playSound('Sounds/18.wav')"></button>
-        <button class="button" style="background-image: url('Images/19.png');" onclick="playSound('Sounds/19.wav')"></button>
-        <button class="button" style="background-image: url('Images/20.png');" onclick="playSound('Sounds/20.wav')"></button>
-        <button class="button" style="background-image: url('Images/21.png');" onclick="playSound('Sounds/21.wav')"></button>
-        <button class="button" style="background-image: url('Images/22.png');" onclick="playSound('Sounds/22.wav')"></button>
-        <button class="button" style="background-image: url('Images/23.png');" onclick="playSound('Sounds/23.wav')"></button>
-        <button class="button" style="background-image: url('Images/24.png');" onclick="playSound('Sounds/24.wav')"></button>
-        <button class="button" style="background-image: url('Images/25.png');" onclick="playSound('Sounds/25.wav')"></button>
-        <button class="button" style="background-image: url('Images/26.png');" onclick="playSound('Sounds/26.wav')"></button>
-        <button class="button" style="background-image: url('Images/27.png');" onclick="playSound('Sounds/27.wav')"></button>
-        <button class="button" style="background-image: url('Images/28.png');" onclick="playSound('Sounds/28.wav')"></button>
-        <button class="button" style="background-image: url('Images/29.png');" onclick="playSound('Sounds/29.wav')"></button>
+    
+    <div class="selector-container">
+        <p>Choose how many letters to be viewed:</p>
+        <select id="letter-count">
+            <option value="0">0</option>
+            <script>
+                for (let i = 1; i <= 29; i++) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                }
+            </script>
+        </select>
+        <button onclick="showLetters()">Confirm</button>
     </div>
 
+    <div class="button-container" id="button-container">
+        <script>
+            for (let i = 1; i <= 29; i++) {
+                document.write(`
+                    <button class="button" id="btn${i}" style="background-image: url('Images/${i}.png'); display: none;" onclick="playSound('Sounds/${i}.wav')"></button>
+                `);
+            }
+        </script>
+    </div>
+    
     <audio id="audio-player"></audio>
-
+    
     <footer>
         <p class="footer-text">Made by: Alhassan Mokhtar</p>
         <p class="footer-text">101</p>
     </footer>
     
-    
-
     <script>
         function playSound(soundFile) {
             var audio = document.getElementById('audio-player');
             audio.src = soundFile;
             audio.play();
+        }
+
+        function showLetters() {
+            let count = document.getElementById('letter-count').value;
+            let container = document.getElementById('button-container');
+            
+            container.style.display = count > 0 ? 'flex' : 'none';
+            
+            for (let i = 1; i <= 29; i++) {
+                document.getElementById(`btn${i}`).style.display = i <= count ? 'block' : 'none';
+            }
         }
     </script>
 </body>
