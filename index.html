@@ -83,14 +83,7 @@
     
     <div class="selector-container">
         <p>Select the number of letters to display:</p>
-        <select id="letter-count">
-            <option value="0">0</option>
-            <script>
-                for (let i = 1; i <= 29; i++) {
-                    document.write(`<option value="${i}">${i}</option>`);
-                }
-            </script>
-        </select>
+        <select id="letter-count"></select>
         <button onclick="showLetters()">Confirm</button>
     </div>
 
@@ -112,6 +105,17 @@
     </footer>
     
     <script>
+        // Populate the dropdown with numbers from 0 to 29
+        window.onload = function() {
+            let select = document.getElementById("letter-count");
+            for (let i = 0; i <= 29; i++) {
+                let option = document.createElement("option");
+                option.value = i;
+                option.textContent = i;
+                select.appendChild(option);
+            }
+        };
+
         function playSound(soundFile) {
             var audio = document.getElementById('audio-player');
             audio.src = soundFile;
