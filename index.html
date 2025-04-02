@@ -33,7 +33,7 @@
             font-size: 20px;
             padding: 5px 10px;
             border: 3px solid #46b0ad;
-            border-radius: 5px; /* Reduced from 20px */
+            border-radius: 5px; /* Adjusted radius */
             background-color: transparent;
             color: #e5e8e8;
             cursor: pointer;
@@ -41,6 +41,13 @@
             text-align: center;
             transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
         }
+        
+        /* For the dropdown options */
+        select option {
+            background-color: #2e4053; /* Set the same background as the body */
+            color: #e5e8e8; /* Ensure text is visible */
+        }
+
         select:hover, .selector-container button:hover {
             border-color: #e5e8e8;
         }
