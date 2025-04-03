@@ -6,17 +6,51 @@
     <title>Arabic Alphabet - Articulation</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: #2e4053;
+            background-size: cover;
+            font-family: Calibri, sans-serif;
             text-align: center;
-            padding: 20px;
-            background-color: #2e4053; /* Updated background color */
-            color: white; /* Make text white for better contrast */
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: flex-start;
+            margin: 0;
+            padding: 0;
         }
-        h1, h2 {
-            color: #f1f1f1; /* Lighter color for headings */
+        h1, h2, p {
+            color: #e5e8e8; /* Light gray color */
+            font-family: Calibri, sans-serif;
         }
         .video-container {
             margin-top: 20px;
+        }
+        .footer-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e5e8e8;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            flex-direction: row-reverse;
+            display: none;
+        }
+        .button {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            border: none;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+            border-radius: 20px;
+        }
+        .button:hover {
+            transform: scale(1.2);
+            border: 3px solid #46b0ad;
+            border-radius: 20px;
         }
     </style>
 </head>
@@ -34,5 +68,10 @@
 
     <p>The more you practice, the more fluent you will be.</p>
     <p>The more you practice, the more you will improve.</p>
+
+    <footer>
+        <p class="footer-text">Made by: Alhassan Mokhtar</p>
+        <p class="footer-text">101</p>
+    </footer>
 </body>
 </html>
