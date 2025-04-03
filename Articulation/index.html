@@ -31,12 +31,16 @@
         .practice-text {
             font-size: 30px; /* Increased font size */
             font-weight: bold;
-            margin-bottom: 10px; /* Reduced gap between the lines */
+            margin: 0; /* Removed margin to reduce gap */
+        }
+        .practice-text + .practice-text {
+            margin-top: 5px; /* Added small gap between the two lines */
         }
         .footer-text {
-            font-size: 30px; /* Same font size as practice text */
+            font-size: 30px; /* Ensured same font size */
             font-weight: bold; /* Same bold style */
             color: #e5e8e8; /* Light gray color */
+            margin-top: 20px; /* Slight margin for spacing */
         }
     </style>
 </head>
