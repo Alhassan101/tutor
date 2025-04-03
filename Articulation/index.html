@@ -36,16 +36,20 @@
             font-size: 22px;
         }
 
-        .video-container {
-            margin-top: 20px;
-            width: 90%;
-            text-align: center;
-        }
+.video-container {
+    margin-top: 20px;
+    width: 90%;
+    text-align: center;
+    display: flex;           /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;           /* Use full viewport height */
+}
 
-        video {
-            width: 90%;  /* Makes the video responsive */
-            height: auto; /* Maintains the aspect ratio */
-        }
+video {
+    width: 90%;              /* Make the video responsive */
+    height: auto;            /* Maintain aspect ratio */
+}
 
         .practice-text {
             font-size: 22px;
