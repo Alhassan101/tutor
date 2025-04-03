@@ -28,12 +28,12 @@
         }
 
         h1 {
-            font-size: 6vw; /* Adjust for better scaling on smaller screens */
+            font-size: 36px; /* Keep original font size */
             font-weight: bold;
         }
 
         h2 {
-            font-size: 4vw;
+            font-size: 36px; /* Keep original font size */
             font-weight: bold;
         }
 
@@ -50,13 +50,13 @@
         }
 
         .practice-text {
-            font-size: 5vw; /* Dynamically scale font size based on screen width */
+            font-size: 36px; /* Keep original font size */
             font-weight: bold;
             margin: 10px 0;
         }
 
         .footer-text {
-            font-size: 3vw; /* Adjust footer font size */
+            font-size: 36px; /* Keep original font size */
             font-weight: bold;
             color: #e5e8e8;
             margin-top: 20px;
@@ -64,14 +64,19 @@
 
         /* Media Query for smaller screens */
         @media (max-width: 600px) {
-            h1, h2 {
-                font-size: 5vw;
+            /* Ensure everything stays centered and adjusted on small screens */
+            .video-container {
+                margin-top: 10px;
             }
-            .practice-text {
-                font-size: 4vw;
+
+            video {
+                width: 100%;
+                max-width: 90%;
             }
+
             .footer-text {
-                font-size: 4vw;
+                font-size: 30px;
+                margin-top: 15px;
             }
         }
     </style>
