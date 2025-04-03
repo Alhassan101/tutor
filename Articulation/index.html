@@ -10,71 +10,69 @@
 
     <style>
         body {
-            background-color: #2e4053;
-            background-size: cover;
-            font-family: Calibri, sans-serif;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            justify-content: flex-start;
-            margin: 0;
-            padding: 0;
-        }
+    background-color: #2e4053;
+    background-size: cover;
+    font-family: Calibri, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
 
-        h1, h2, p {
-            color: #e5e8e8;
-            font-family: Calibri, sans-serif;
-        }
+h1, h2, p {
+    color: #e5e8e8;
+    font-family: Calibri, sans-serif;
+}
 
-        h1 {
-            font-size: 36px;
-            font-weight: bold;
-        }
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
 
-        h2 {
-            font-size: 22px;
-            margin: 4px 0;
-        }
+h2 {
+    font-size: 22px;
+    margin: 4px 0;
+}
 
-        .video-container {
-            margin-top: 20px;
-            width: 90%;
-            text-align: center;
-            display: flex;           /* Enable flexbox */
-            justify-content: center; /* Center horizontally */
-            align-items: center;     /* Center vertically */
-            height: 100vh;           /* Use full viewport height */
-        }
+.video-container {
+    margin-top: 20px;
+    width: 100%;              /* Make the container full width */
+    display: flex;            /* Enable flexbox */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height: 100%;             /* Use full height of the viewport */
+}
 
-        video {
-            width: 90%;              /* Make the video responsive */
-            height: auto;            /* Maintain aspect ratio */
-        }
+video {
+    width: 90%;              /* Make the video responsive */
+    height: auto;            /* Maintain aspect ratio */
+}
 
-        .practice-text {
-            font-size: 22px;
-            margin: 4px 0;
-        }
+.practice-text {
+    font-size: 22px;
+    margin: 4px 0;
+}
 
-        .footer-text {
-            font-size: 24px;
-            font-weight: bold;
-            color: #e5e8e8;
-            margin-top: 20px;
-        }
+.footer-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e5e8e8;
+    margin-top: 20px;
+}
 
-        /* Media Query for smaller screens */
-        @media (max-width: 600px) {
-            .video-container {
-                margin-top: 10px;
-            }
+@media (max-width: 600px) {
+    .video-container {
+        margin-top: 10px;
+    }
 
-            .footer-text {
-                font-size: 20px; /* Slightly smaller footer text on mobile */
-                margin-top: 15px;
-            }
-        }
+    .footer-text {
+        font-size: 20px; 
+        margin-top: 15px;
+    }
+}
     </style>
 </head>
 <body>
