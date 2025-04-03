@@ -12,7 +12,7 @@
         body {
             background-color: #2e4053;
             background-size: cover;
-            font-family: Calibri, sans-serif; /* Calibri is a system font */
+            font-family: Calibri, sans-serif;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -21,34 +21,58 @@
             margin: 0;
             padding: 0;
         }
-        h1, h2, p, footer {
-            color: #e5e8e8; /* Light gray color */
-            font-family: Calibri, sans-serif; /* Use Calibri font */
-            text-align: center;
+
+        h1, h2, p {
+            color: #e5e8e8;
+            font-family: Calibri, sans-serif;
         }
+
         h1 {
-            font-size: 36px; /* Same size as the source */
-            font-weight: bold; /* Same weight as source */
-            margin-top: 20px;
+            font-size: 6vw; /* Adjust for better scaling on smaller screens */
+            font-weight: bold;
         }
+
         h2 {
-            font-size: 24px; /* Smaller than h1, like the source */
-            font-weight: normal; /* Normal weight like in the source */
-            margin-top: 10px;
+            font-size: 4vw;
+            font-weight: bold;
         }
+
         .video-container {
             margin-top: 20px;
+            width: 100%;
+            text-align: center;
         }
+
+        video {
+            width: 100%;
+            max-width: 600px; /* Set a max-width to prevent it from growing too large */
+            height: auto;
+        }
+
         .practice-text {
-            font-size: 24px; /* Same font size as the source's dropdown text */
-            font-weight: normal;
-            margin: 10px 0; /* Adjusted margin to reduce gap */
+            font-size: 5vw; /* Dynamically scale font size based on screen width */
+            font-weight: bold;
+            margin: 10px 0;
         }
+
         .footer-text {
-            font-size: 24px; /* Same size as the source footer */
-            font-weight: bold; /* Bold style */
-            color: #e5e8e8; /* Light gray color */
-            margin-top: 20px; /* Same gap as h2 to video */
+            font-size: 3vw; /* Adjust footer font size */
+            font-weight: bold;
+            color: #e5e8e8;
+            margin-top: 20px;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 600px) {
+            h1, h2 {
+                font-size: 5vw;
+            }
+            .practice-text {
+                font-size: 4vw;
+            }
+            .footer-text {
+                font-size: 4vw;
+            }
         }
     </style>
 </head>
@@ -58,7 +82,7 @@
     
     <!-- Video Display -->
     <div class="video-container">
-        <video width="600" controls>
+        <video controls>
             <source src="https://alhassan101.github.io/tutor/Articulation/Arabic_Alphabet_4th_letter.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
