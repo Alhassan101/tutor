@@ -44,8 +44,7 @@
         }
 
         video {
-            width: 100%;
-            max-width: 600px; /* Set a max-width to prevent it from growing too large */
+            width: 600px;  /* Keep the video width fixed */
             height: auto;
         }
 
@@ -64,18 +63,16 @@
 
         /* Media Query for smaller screens */
         @media (max-width: 600px) {
-            /* Ensure everything stays centered and adjusted on small screens */
             .video-container {
                 margin-top: 10px;
             }
 
             video {
-                width: 100%;
-                max-width: 90%;
+                width: 600px;  /* Keep the video width fixed on mobile as well */
             }
 
             .footer-text {
-                font-size: 30px;
+                font-size: 36px; /* Keep the font size the same on mobile */
                 margin-top: 15px;
             }
         }
