@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="icon.ico">
 
     <style>
-        body {
+body {
     background-color: #2e4053;
     background-size: cover;
     font-family: Calibri, sans-serif;
@@ -38,22 +38,23 @@ h2 {
 }
 
 .video-container {
-    margin-top: 20px;
-    width: 100%;              /* Make the container full width */
+    margin-top: 20px; /* Adjust the top margin to prevent overlap */
+    width: 100%;              /* Full width */
     display: flex;            /* Enable flexbox */
     justify-content: center;  /* Center horizontally */
     align-items: center;      /* Center vertically */
-    height: 100%;             /* Use full height of the viewport */
+    height: auto;             /* Auto height for proper positioning */
 }
 
 video {
     width: 90%;              /* Make the video responsive */
     height: auto;            /* Maintain aspect ratio */
+    max-width: 800px;        /* Prevent video from getting too large */
 }
 
 .practice-text {
     font-size: 22px;
-    margin: 4px 0;
+    margin: 10px 0;           /* Ensure there's space between paragraphs */
 }
 
 .footer-text {
@@ -65,12 +66,17 @@ video {
 
 @media (max-width: 600px) {
     .video-container {
-        margin-top: 10px;
+        margin-top: 10px; /* Reduce margin on mobile */
     }
 
     .footer-text {
         font-size: 20px; 
         margin-top: 15px;
+    }
+
+    .practice-text {
+        font-size: 18px;  /* Slightly smaller text for mobile */
+        margin: 6px 0;    /* Adjust margins for mobile */
     }
 }
     </style>
